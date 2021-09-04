@@ -8,11 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		1B7D3C8626E23D72000172FC /* IesbSocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D3C8526E23D72000172FC /* IesbSocialApp.swift */; };
-		1B7D3C8826E23D72000172FC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D3C8726E23D72000172FC /* ContentView.swift */; };
 		1B7D3C8A26E23D72000172FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B7D3C8926E23D72000172FC /* Assets.xcassets */; };
 		1B7D3C8D26E23D72000172FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B7D3C8C26E23D72000172FC /* Preview Assets.xcassets */; };
 		1B7D3C9826E23D72000172FC /* IesbSocialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D3C9726E23D72000172FC /* IesbSocialTests.swift */; };
 		1B7D3CA326E23D72000172FC /* IesbSocialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D3CA226E23D72000172FC /* IesbSocialUITests.swift */; };
+		1B7D3CB426E23E84000172FC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D3CB326E23E84000172FC /* User.swift */; };
+		1B7D3CB626E23F18000172FC /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D3CB526E23F18000172FC /* UserViewModel.swift */; };
+		1B7D3CB926E24104000172FC /* URLSession+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D3CB826E24104000172FC /* URLSession+Map.swift */; };
+		1B7D3CBB26E24392000172FC /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D3CBA26E24392000172FC /* PostViewModel.swift */; };
+		1B7D3CBD26E243D2000172FC /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D3CBC26E243D2000172FC /* UserListView.swift */; };
+		1B7D3CBF26E245B7000172FC /* PostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D3CBE26E245B7000172FC /* PostListView.swift */; };
+		1B7D3CC126E2CA67000172FC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D3CC026E2CA67000172FC /* Post.swift */; };
+		1B7D3CC326E2D0EE000172FC /* ObservableObject+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D3CC226E2D0EE000172FC /* ObservableObject+Error.swift */; };
+		1B7D3CC526E2E093000172FC /* View+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D3CC426E2E093000172FC /* View+Loading.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +43,6 @@
 /* Begin PBXFileReference section */
 		1B7D3C8226E23D72000172FC /* IesbSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IesbSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7D3C8526E23D72000172FC /* IesbSocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IesbSocialApp.swift; sourceTree = "<group>"; };
-		1B7D3C8726E23D72000172FC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1B7D3C8926E23D72000172FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B7D3C8C26E23D72000172FC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1B7D3C8E26E23D72000172FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +52,15 @@
 		1B7D3C9E26E23D72000172FC /* IesbSocialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IesbSocialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7D3CA226E23D72000172FC /* IesbSocialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IesbSocialUITests.swift; sourceTree = "<group>"; };
 		1B7D3CA426E23D72000172FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B7D3CB326E23E84000172FC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1B7D3CB526E23F18000172FC /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		1B7D3CB826E24104000172FC /* URLSession+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Map.swift"; sourceTree = "<group>"; };
+		1B7D3CBA26E24392000172FC /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		1B7D3CBC26E243D2000172FC /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		1B7D3CBE26E245B7000172FC /* PostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListView.swift; sourceTree = "<group>"; };
+		1B7D3CC026E2CA67000172FC /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		1B7D3CC226E2D0EE000172FC /* ObservableObject+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableObject+Error.swift"; sourceTree = "<group>"; };
+		1B7D3CC426E2E093000172FC /* View+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Loading.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +111,11 @@
 		1B7D3C8426E23D72000172FC /* IesbSocial */ = {
 			isa = PBXGroup;
 			children = (
+				1B7D3CB726E240D3000172FC /* Util */,
+				1B7D3CB226E23DA7000172FC /* Model */,
+				1B7D3CB126E23D9B000172FC /* ViewModel */,
+				1B7D3CB026E23D8C000172FC /* View */,
 				1B7D3C8526E23D72000172FC /* IesbSocialApp.swift */,
-				1B7D3C8726E23D72000172FC /* ContentView.swift */,
 				1B7D3C8926E23D72000172FC /* Assets.xcassets */,
 				1B7D3C8E26E23D72000172FC /* Info.plist */,
 				1B7D3C8B26E23D72000172FC /* Preview Content */,
@@ -128,6 +147,43 @@
 				1B7D3CA426E23D72000172FC /* Info.plist */,
 			);
 			path = IesbSocialUITests;
+			sourceTree = "<group>";
+		};
+		1B7D3CB026E23D8C000172FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1B7D3CBC26E243D2000172FC /* UserListView.swift */,
+				1B7D3CBE26E245B7000172FC /* PostListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1B7D3CB126E23D9B000172FC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1B7D3CB526E23F18000172FC /* UserViewModel.swift */,
+				1B7D3CBA26E24392000172FC /* PostViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1B7D3CB226E23DA7000172FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1B7D3CB326E23E84000172FC /* User.swift */,
+				1B7D3CC026E2CA67000172FC /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1B7D3CB726E240D3000172FC /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				1B7D3CB826E24104000172FC /* URLSession+Map.swift */,
+				1B7D3CC226E2D0EE000172FC /* ObservableObject+Error.swift */,
+				1B7D3CC426E2E093000172FC /* View+Loading.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +315,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B7D3C8826E23D72000172FC /* ContentView.swift in Sources */,
+				1B7D3CBB26E24392000172FC /* PostViewModel.swift in Sources */,
+				1B7D3CBD26E243D2000172FC /* UserListView.swift in Sources */,
+				1B7D3CB426E23E84000172FC /* User.swift in Sources */,
+				1B7D3CC126E2CA67000172FC /* Post.swift in Sources */,
+				1B7D3CB626E23F18000172FC /* UserViewModel.swift in Sources */,
 				1B7D3C8626E23D72000172FC /* IesbSocialApp.swift in Sources */,
+				1B7D3CC326E2D0EE000172FC /* ObservableObject+Error.swift in Sources */,
+				1B7D3CB926E24104000172FC /* URLSession+Map.swift in Sources */,
+				1B7D3CBF26E245B7000172FC /* PostListView.swift in Sources */,
+				1B7D3CC526E2E093000172FC /* View+Loading.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
