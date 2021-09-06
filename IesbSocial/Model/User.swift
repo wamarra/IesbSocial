@@ -9,10 +9,21 @@ import Foundation
 
 struct User: Codable, Identifiable {
     let id: Int
-    let name, username, email: String
+    var name, username, email: String
     let address: Address
     let phone, website: String
     let company: Company
+    
+    init(name: String, username: String, email: String) {
+        self.id = UUID().hashValue
+        self.name = name
+        self.username = username
+        self.email = email
+        self.address = Address(street: "", suite: "", city: "", zipcode: "", geo: Geo(lat: "", lng: ""))
+        self.phone = ""
+        self.website = ""
+        self.company = Company(name: "", catchPhrase: "", bs: "")
+    }
 }
 
 struct Address: Codable {

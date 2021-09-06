@@ -39,4 +39,8 @@ class UserViewModel: ObservableObject {
                 .sink(receiveCompletion: {self.sinkError($0) { self.loading = false }}) { self.users = $0 }
         }
     }
+    
+    func addUser(user: User) {
+        self.users.append(user)
+    }
 }
