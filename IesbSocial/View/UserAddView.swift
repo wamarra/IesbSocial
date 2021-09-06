@@ -13,7 +13,6 @@ struct UserAddView: View {
     var viewModel: UserViewModel
     
     @State private var showingAlert = false
-    @State private var backToUserListView = false
     @State private var name: String = ""
     @State private var username: String = ""
     @State private var email: String = ""
