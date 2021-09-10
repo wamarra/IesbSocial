@@ -10,7 +10,7 @@ import SwiftUI
 struct UserListView: View {
     
     @ObservedObject
-    var viewModel: UserViewModel
+    var userViewModel: UserViewModel
     
     @StateObject
     var postViewModel = PostViewModel()
@@ -18,11 +18,11 @@ struct UserListView: View {
     var body: some View {
         NavigationView {
             Group {
-                if viewModel.loading {
+                if userViewModel.loading {
                     loading()
                 }else {
                     List {
-                        ForEach(viewModel.users) { user in
+                        ForEach(userViewModel.users) { user in
                             NavigationLink(destination: PostListView(user: user)) {
                                 VStack(alignment: .leading) {
                                     Text(user.name).font(.title2)
@@ -34,11 +34,11 @@ struct UserListView: View {
                 }
             }
             .navigationTitle("Usuários")
-            .navigationBarItems(trailing: UserAdd(userViewModel: viewModel))
+            .navigationBarItems(trailing: UserAdd(userViewModel: userViewModel))
         }
         .environmentObject(postViewModel)
         .onAppear {
-            viewModel.fetchUsers()
+            userViewModel.fetchUsers()
         }
     }
 }
@@ -48,7 +48,7 @@ struct UserAdd: View {
     var userViewModel: UserViewModel
     
     var body: some View {
-        NavigationLink(destination: UserAddView(addressViewModel: ViaCepViewModel()).environmentObject(userViewModel)) {
+        NavigationLink(destination: UserAddView(viaCepViewModel: ViaCepViewModel()).environmentObject(userViewModel)) {
            Text(" + ")
             .navigationBarTitle("Adicionar Usuário")
             .frame(minWidth: 0, maxWidth: 100)

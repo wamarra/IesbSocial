@@ -10,17 +10,17 @@ import SwiftUI
 struct PostListView: View {
     
     @EnvironmentObject
-    var viewModel: PostViewModel
+    var postViewModel: PostViewModel
     
     var user: User
     
     var body: some View {
         VStack {
-            if viewModel.loading {
+            if postViewModel.loading {
                 loading()
             }else {
                 List {
-                    ForEach(viewModel.posts) { post in
+                    ForEach(postViewModel.posts) { post in
                         VStack(alignment: .leading) {
                             Text(post.title).font(.title2)
                             Text(post.body).font(.subheadline)
@@ -32,7 +32,7 @@ struct PostListView: View {
         }
         .navigationTitle(user.name)
         .onAppear {
-            viewModel.fetchPosts(for: user)
+            postViewModel.fetchPosts(for: user)
         }
     }
 }

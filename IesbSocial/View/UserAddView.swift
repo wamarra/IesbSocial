@@ -13,7 +13,7 @@ struct UserAddView: View {
     var userViewModel: UserViewModel
 
     @ObservedObject
-    var addressViewModel: ViaCepViewModel
+    var viaCepViewModel: ViaCepViewModel
     
     @State private var showingAlert = false
     @State private var name = ""
@@ -97,10 +97,10 @@ struct UserAddView: View {
         })
         .onChange(of: cep, perform: { value in
             if value.count == 8 {
-                addressViewModel.fetchCep(cep: cep)
+                viaCepViewModel.fetchCep(cep: cep)
             }
         })
-        .onReceive(addressViewModel.$viaCep, perform: { viaCep in
+        .onReceive(viaCepViewModel.$viaCep, perform: { viaCep in
             logradouro = viaCep?.logradouro ?? ""
             uf = viaCep?.uf ?? ""
         })
