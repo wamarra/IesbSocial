@@ -14,14 +14,14 @@ struct User: Codable, Identifiable {
     let phone, website: String
     let company: Company
     
-    init(name: String, username: String, email: String) {
+    init(name: String, email: String, phone: String, website: String) {
         self.id = UUID().hashValue
         self.name = name
-        self.username = username
+        self.username = ""
         self.email = email
         self.address = Address(street: "", suite: "", city: "", zipcode: "", geo: Geo(lat: "", lng: ""))
-        self.phone = ""
-        self.website = ""
+        self.phone = phone
+        self.website = website
         self.company = Company(name: "", catchPhrase: "", bs: "")
     }
 }

@@ -5,7 +5,7 @@
 //  Created by Wesley Marra on 03/09/21.
 //
 
-import Foundation
+import SwiftUI
 import Combine
 
 class UserViewModel: ObservableObject {
@@ -14,6 +14,9 @@ class UserViewModel: ObservableObject {
        
     @Published
     private(set) var loading = false
+    
+    @Published
+    private(set) var error: String?
 
     @Published
     private(set) var users = [User]() {
@@ -40,7 +43,44 @@ class UserViewModel: ObservableObject {
         }
     }
     
-    func addUser(user: User) {
-        self.users.append(user)
+    func addUser(user: User, bindingAlert: Binding<Bool>) {
+        
+        if let url = URL(string: "\(kBaseURL)/users") {
+            let session = URLSession.shared
+            var request = URLRequest(url: url)
+            
+            request.httpMethod = "POST"
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            
+            do {
+                let body = try JSONEncoder().encode(user)
+                
+                loading = true
+                
+                session.uploadTask(with: request, from: body) { data, response, error in
+                    DispatchQueue.main.async {
+                        self.loading = false
+                        
+                        if let requestError = error {
+                            self.error = requestError.localizedDescription
+                        }
+                        
+                        guard let resp = response as? HTTPURLResponse,
+                              resp.statusCode >= 200,
+                              resp.statusCode < 300 else {
+                            self.error = "Erro ao salvar usuário"
+                            return
+                        }
+                        
+                        self.users.append(user)
+                        bindingAlert.wrappedValue = true
+                    }
+                }.resume()
+            } catch {
+                bindingAlert.wrappedValue = true
+                print("Erro ao salvar usuário")
+                return
+            }
+        }
     }
 }

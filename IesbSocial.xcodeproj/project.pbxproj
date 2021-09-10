@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B6AAB1426EAE8CF0051531D /* ViaCep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6AAB1326EAE8CF0051531D /* ViaCep.swift */; };
+		1B6AAB1626EAE8F00051531D /* ViaCepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6AAB1526EAE8F00051531D /* ViaCepViewModel.swift */; };
 		1B7D3C8626E23D72000172FC /* IesbSocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D3C8526E23D72000172FC /* IesbSocialApp.swift */; };
 		1B7D3C8A26E23D72000172FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B7D3C8926E23D72000172FC /* Assets.xcassets */; };
 		1B7D3C8D26E23D72000172FC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B7D3C8C26E23D72000172FC /* Preview Assets.xcassets */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B6AAB1326EAE8CF0051531D /* ViaCep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaCep.swift; sourceTree = "<group>"; };
+		1B6AAB1526EAE8F00051531D /* ViaCepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaCepViewModel.swift; sourceTree = "<group>"; };
 		1B7D3C8226E23D72000172FC /* IesbSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IesbSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B7D3C8526E23D72000172FC /* IesbSocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IesbSocialApp.swift; sourceTree = "<group>"; };
 		1B7D3C8926E23D72000172FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 			children = (
 				1B7D3CB526E23F18000172FC /* UserViewModel.swift */,
 				1B7D3CBA26E24392000172FC /* PostViewModel.swift */,
+				1B6AAB1526EAE8F00051531D /* ViaCepViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 			children = (
 				1B7D3CB326E23E84000172FC /* User.swift */,
 				1B7D3CC026E2CA67000172FC /* Post.swift */,
+				1B6AAB1326EAE8CF0051531D /* ViaCep.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -322,6 +328,8 @@
 				1B7D3CBD26E243D2000172FC /* UserListView.swift in Sources */,
 				1B7D3CB426E23E84000172FC /* User.swift in Sources */,
 				1B7D3CC126E2CA67000172FC /* Post.swift in Sources */,
+				1B6AAB1426EAE8CF0051531D /* ViaCep.swift in Sources */,
+				1B6AAB1626EAE8F00051531D /* ViaCepViewModel.swift in Sources */,
 				1B7D3CB626E23F18000172FC /* UserViewModel.swift in Sources */,
 				1B96E39126E660E5009DE620 /* UserAddView.swift in Sources */,
 				1B7D3C8626E23D72000172FC /* IesbSocialApp.swift in Sources */,

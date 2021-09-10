@@ -34,7 +34,7 @@ struct UserListView: View {
                 }
             }
             .navigationTitle("Usuários")
-            .navigationBarItems(trailing: UserAdd(viewModel: viewModel))
+            .navigationBarItems(trailing: UserAdd(userViewModel: viewModel))
         }
         .environmentObject(postViewModel)
         .onAppear {
@@ -45,10 +45,10 @@ struct UserListView: View {
 
 struct UserAdd: View {
     
-    var viewModel: UserViewModel
+    var userViewModel: UserViewModel
     
     var body: some View {
-        NavigationLink(destination: UserAddView(viewModel: viewModel)) {
+        NavigationLink(destination: UserAddView(addressViewModel: ViaCepViewModel()).environmentObject(userViewModel)) {
            Text(" + ")
             .navigationBarTitle("Adicionar Usuário")
             .frame(minWidth: 0, maxWidth: 100)
